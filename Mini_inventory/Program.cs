@@ -8,10 +8,11 @@ class Program
 
         myChar.Backpack.Display();
 
-        Armor helmet = new Armor 
-        { 
-            Name = "Bronze helmet", 
-            Weight = 3f 
+        Armor helmet = new Armor
+        {
+            Name = "Bronze helmet",
+            Weight = 3f,
+            Protection = 5f
         };
 
         Console.WriteLine($"You've found a {helmet.Name}. Pick it up? [yes|no]");
@@ -20,9 +21,9 @@ class Program
         while (choice != "yes" && choice != "no")
         {
             string? input = Console.ReadLine();
-            if (input != null)
+            if (!string.IsNullOrWhiteSpace(input))
             {
-                choice = input.ToLower();
+                choice = input.Trim().ToLower();
             }
         }
 
