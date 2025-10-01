@@ -17,7 +17,7 @@ class Program
 
         Console.WriteLine($"You've found a {helmet.Name}. Pick it up? [yes|no]");
 
-        string choice = string.Empty;
+        string choice = string.Empty;   
         while (choice != "yes" && choice != "no")
         {
             string? input = Console.ReadLine();
